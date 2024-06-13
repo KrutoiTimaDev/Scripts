@@ -1,0 +1,140 @@
+-- Made by BaconchikP --
+
+-- Part
+
+local Part = Instance.new("Part")
+Part.Material = Enum.Material.SmoothPlastic
+Part.Size = Vector3.new(21.149, 4.597, 7.558)
+Part.Position = Vector3.new(-0.594, 4.326, -26.654)
+Part.Anchored = true
+Part.Parent = workspace
+
+-- right-up wheel
+
+local RightUpWheel = Instance.new("Part")
+RightUpWheel.Shape = "Cylinder"
+RightUpWheel.Material = Enum.Material.SmoothPlastic
+RightUpWheel.Size = Vector3.new(1.201, 2.802, 2.519)
+RightUpWheel.Position = Vector3.new(-6.766, 1.405, -30.088)
+RightUpWheel.Orientation = Vector3.new(0, -90, 180)
+RightUpWheel.Anchored = true
+RightUpWheel.Color = Color3.fromRGB(0, 0, 0)
+RightUpWheel.Parent = workspace
+
+local bbb = Instance.new("Part")
+bbb.Shape = "Cylinder"
+bbb.Material = Enum.Material.SmoothPlastic
+bbb.Size = Vector3.new(0.058, 2.221, 1.997)
+bbb.Position = Vector3.new(-6.766, 1.405, -30.724)
+bbb.Orientation = Vector3.new(0, -90, 180)
+bbb.Anchored = true
+bbb.Color = Color3.fromRGB(159, 161, 172)
+bbb.Parent = workspace
+
+local bbb2 = Instance.new("Part")
+bbb2.Shape = "Cylinder"
+bbb2.Material = Enum.Material.SmoothPlastic
+bbb2.Size = Vector3.new(0.183, 1.25, 1.124)
+bbb2.Position = Vector3.new(-6.766, 1.405, -30.683)
+bbb2.Orientation = Vector3.new(0, -90, 180)
+bbb2.Anchored = true
+bbb2.Color = Color3.fromRGB(91, 93, 105)
+bbb2.Parent = workspace
+
+-- right-down wheel
+
+local RightDownWheel = Instance.new("Part")
+RightDownWheel.Shape = "Cylinder"
+RightDownWheel.Material = Enum.Material.SmoothPlastic
+RightDownWheel.Size = Vector3.new(1.201, 2.802, 2.519)
+RightDownWheel.Position = Vector3.new(5.973, 1.405, -30.088)
+RightDownWheel.Orientation = Vector3.new(0, -90, 180)
+RightDownWheel.Anchored = true
+RightDownWheel.Color = Color3.fromRGB(0, 0, 0)
+RightDownWheel.Parent = workspace
+
+local bbb3 = Instance.new("Part")
+bbb3.Shape = "Cylinder"
+bbb3.Material = Enum.Material.SmoothPlastic
+bbb3.Size = Vector3.new(0.058, 2.221, 1.997)
+bbb3.Position = Vector3.new(5.973, 1.405, -30.724)
+bbb3.Orientation = Vector3.new(0, -90, 180)
+bbb3.Anchored = true
+bbb3.Color = Color3.fromRGB(159, 161, 172)
+bbb3.Parent = workspace
+
+local bbb4 = Instance.new("Part")
+bbb4.Shape = "Cylinder"
+bbb4.Material = Enum.Material.SmoothPlastic
+bbb4.Size = Vector3.new(0.183, 1.25, 1.124)
+bbb4.Position = Vector3.new(5.973, 1.405, -30.683)
+bbb4.Orientation = Vector3.new(0, -90, 180)
+bbb4.Anchored = true
+bbb4.Color = Color3.fromRGB(91, 93, 105)
+bbb4.Parent = workspace
+
+-- left-up wheel
+
+local LeftUpWheel = Instance.new("Part")
+LeftUpWheel.Shape = "Cylinder"
+LeftUpWheel.Material = Enum.Material.SmoothPlastic
+LeftUpWheel.Size = Vector3.new(1.201, 2.802, 2.519)
+LeftUpWheel.Position = Vector3.new(-6.766, 1.405, -23.297)
+LeftUpWheel.Orientation = Vector3.new(0, -90, 180)
+LeftUpWheel.Anchored = true
+LeftUpWheel.Color = Color3.fromRGB(0, 0, 0)
+LeftUpWheel.Parent = workspace
+
+local bbb5 = Instance.new("Part")
+bbb5.Shape = "Cylinder"
+bbb5.Material = Enum.Material.SmoothPlastic
+bbb5.Size = Vector3.new(0.058, 2.221, 1.997)
+bbb5.Position = Vector3.new(-6.766, 1.405, -22.661)
+bbb5.Orientation = Vector3.new(0, -90, 180)
+bbb5.Anchored = true
+bbb5.Color = Color3.fromRGB(159, 161, 172)
+bbb5.Parent = workspace
+
+local bbb6 = Instance.new("Part")
+bbb6.Shape = "Cylinder"
+bbb6.Material = Enum.Material.SmoothPlastic
+bbb6.Size = Vector3.new(0.183, 1.25, 1.124)
+bbb6.Position = Vector3.new(-6.766, 1.405, -22.702)
+bbb6.Orientation = Vector3.new(0, -90, 180)
+bbb6.Anchored = true
+bbb6.Color = Color3.fromRGB(91, 93, 105)
+bbb6.Parent = workspace
+
+-- left-down wheel
+
+local LeftDownWheel = Instance.new("Part")
+LeftDownWheel.Shape = "Cylinder"
+LeftDownWheel.Material = Enum.Material.SmoothPlastic
+LeftDownWheel.Size = Vector3.new(1.201, 2.802, 2.519)
+LeftDownWheel.Position = Vector3.new(5.973, 1.405, -23.297)
+LeftDownWheel.Orientation = Vector3.new(0, -90, 180)
+LeftDownWheel.Anchored = true
+LeftDownWheel.Color = Color3.fromRGB(0, 0, 0)
+LeftDownWheel.Parent = workspace
+
+local bbb7 = Instance.new("Part")
+bbb7.Shape = "Cylinder"
+bbb7.Material = Enum.Material.SmoothPlastic
+bbb7.Size = Vector3.new(0.058, 2.221, 1.997)
+bbb7.Position = Vector3.new(5.973, 1.405, -22.661)
+bbb7.Orientation = Vector3.new(0, -90, 180)
+bbb7.Anchored = true
+bbb7.Color = Color3.fromRGB(159, 161, 172)
+bbb7.Parent = workspace
+
+local bbb8 = Instance.new("Part")
+bbb8.Shape = "Cylinder"
+bbb8.Material = Enum.Material.SmoothPlastic
+bbb8.Size = Vector3.new(0.183, 1.25, 1.124)
+bbb8.Position = Vector3.new(5.973, 1.405, -22.702)
+bbb8.Orientation = Vector3.new(0, -90, 180)
+bbb8.Anchored = true
+bbb8.Color = Color3.fromRGB(91, 93, 105)
+bbb8.Parent = workspace
+
+-- Made by BaconchikP --
