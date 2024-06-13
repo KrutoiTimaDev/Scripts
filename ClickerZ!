@@ -1,0 +1,242 @@
+local plr = game.Players:FindFirstChildOfClass("Player")
+
+-- Made by BaconchikP --
+
+local CliTp = Instance.new("Part")
+CliTp.Position = Vector3.new(-42.994, 8.438, -167.676)
+CliTp.Anchored = true
+CliTp.CanCollide = false
+CliTp.Parent = workspace
+CliTp.Transparency = 1
+
+-- Map 1 --
+
+local Plate = Instance.new("Part")
+Plate.Shape = Enum.PartType.Cylinder
+Plate.Position = Vector3.new(-41.065, 0.305, -168.406)
+Plate.Size = Vector3.new(0.609, 107.087, 102.092)
+Plate.Anchored = true
+Plate.BrickColor = BrickColor.new("Sea green")
+Plate.Parent = workspace
+Plate.Rotation = Vector3.new(0,0,90)
+Plate.Material = Enum.Material.SmoothPlastic
+
+local tx = Instance.new("Texture")
+tx.Texture = "http://www.roblox.com/asset/?id=6905004764"
+tx.Transparency = 0.9
+tx.Parent = Plate
+tx.Face = "Right"
+tx.StudsPerTileU = 9
+tx.StudsPerTileV = 9
+
+local Brown = Instance.new("Part")
+Brown.Position = Vector3.new(-40.619, 9.508, -205.009)
+Brown.Size = Vector3.new(75.519, 17.798, 7.467)
+Brown.Anchored = true
+Brown.BrickColor = BrickColor.new("Dark orange")
+Brown.Material = Enum.Material.SmoothPlastic
+Brown.Parent = workspace
+
+local Brown1 = Instance.new("Part")
+Brown1.Position = Vector3.new(-82.013, 9.508, -170.375)
+Brown1.Size = Vector3.new(75.519, 17.798, 7.467)
+Brown1.Anchored = true
+Brown1.BrickColor = BrickColor.new("Dark orange")
+Brown1.Parent = workspace
+Brown1.Rotation = Vector3.new(0,90,0)
+Brown1.Material = Enum.Material.SmoothPlastic
+
+local Brown2 = Instance.new("Part")
+Brown2.Position = Vector3.new(0.847, 9.508, -170.375)
+Brown2.Size = Vector3.new(75.519, 17.798, 7.467)
+Brown2.Anchored = true
+Brown2.BrickColor = BrickColor.new("Dark orange")
+Brown2.Parent = workspace
+Brown2.Rotation = Vector3.new(0,90,0)
+Brown2.Material = Enum.Material.SmoothPlastic
+
+local Brown3 = Instance.new("Part")
+Brown3.Position = Vector3.new(-40.619, 9.508, -134.572)
+Brown3.Size = Vector3.new(75.519, 17.798, 7.467)
+Brown3.Anchored = true
+Brown3.BrickColor = BrickColor.new("Dark orange")
+Brown3.Parent = workspace
+Brown3.Material = Enum.Material.SmoothPlastic
+
+local Green = Instance.new("Part")
+Green.Position = Vector3.new(-40.619, 18.911, -205.009)
+Green.Size = Vector3.new(75.519, 1.01, 7.467)
+Green.Anchored = true
+Green.BrickColor = BrickColor.new("Lime green")
+Green.Parent = workspace
+
+local Green1 = Instance.new("Part")
+Green1.Position = Vector3.new(-82.013, 18.911, -170.375)
+Green1.Size = Vector3.new(75.519, 1.01, 7.467)
+Green1.Anchored = true
+Green1.BrickColor = BrickColor.new("Lime green")
+Green1.Parent = workspace
+Green1.Rotation = Vector3.new(0,90,0)
+
+local Green2 = Instance.new("Part")
+Green2.Position = Vector3.new(-40.619, 18.911, -134.572)
+Green2.Size = Vector3.new(75.519, 1.01, 7.467)
+Green2.Anchored = true
+Green2.BrickColor = BrickColor.new("Lime green")
+Green2.Parent = workspace
+
+
+local Green3 = Instance.new("Part")
+Green3.Position = Vector3.new(0.847, 18.911, -170.375)
+Green3.Size = Vector3.new(75.519, 1.01, 7.467)
+Green3.Anchored = true
+Green3.BrickColor = BrickColor.new("Lime green")
+Green3.Parent = workspace
+Green3.Rotation = Vector3.new(0,90,0)
+
+-- Portal in world 2 --
+
+local Portal = Instance.new("Part")
+Portal.BrickColor = BrickColor.new("Magenta")
+Portal.Material = Enum.Material.SmoothPlastic
+Portal.Transparency = 0.3
+Portal.CanCollide = false
+Portal.Anchored = true
+Portal.Shape = "Cylinder"
+Portal.Size = Vector3.new(0.693, 8.107, 8.107)
+Portal.Position = Vector3.new(-30.173, 5.566, -199.596)
+Portal.Rotation = Vector3.new(0, 90, 180)
+Portal.Parent = workspace
+
+-- Gui for portal in world 2 --
+
+local sg = Instance.new("SurfaceGui")
+sg.Face = "Right"
+sg.Parent = Portal
+
+local Tl = Instance.new("TextLabel")
+Tl.BackgroundTransparency = 1
+Tl.Position = UDim2.new(0, 50,0, 100)
+Tl.Size = UDim2.new(0,720,0,450)
+Tl.Font = Enum.Font.FredokaOne
+Tl.Text = "Soon"
+Tl.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tl.TextScaled = true
+Tl.Rotation = 180
+Tl.RichText = true
+Tl.Parent = sg
+
+-- Leaderstats --
+
+local data = game:GetService("DataStoreService"):GetDataStore("Clicker")
+local hasdataerror = false
+
+clickv = 0
+rebirthv = 0
+
+local clicks
+local rebirths
+
+
+	
+	workspace.Baseplate:Destroy()
+	workspace.SpawnLocation.Position = Vector3.new(-48.755, 0.761, -171.1)
+	
+	local l = Instance.new("Folder", plr) l.Name = "leaderstats"
+
+	clicks = Instance.new("IntValue", l) clicks.Name = "Clicks";
+	rebirths = Instance.new("IntValue", l) rebirths.Name = "Rebirths";
+
+	local data2
+	local success, dataerror = pcall(function()
+		data2 = data:GetAsync(plr.UserId) or {["Clicks"] = 0; ["Rebirth"] = 0}
+	end)
+
+	repeat wait() until l and clicks and rebirths
+
+	if success then
+		hasdataerror = false
+		clicks.Value = data2["Clicks"]
+		rebirths.Value = data2["Rebirth"]
+	else
+		hasdataerror = true
+		plr:Kick("Data error")
+	end
+
+	local function changed()
+		data:SetAsync(plr.UserId, {
+			["Clicks"] = clicks.Value;
+			["Rebirth"] = rebirths.Value;
+		})
+	end
+	clicks.Changed:Connect(changed) rebirths.Changed:Connect(changed)
+
+
+game.Players.PlayerRemoving:Connect(function(plr)
+	if hasdataerror then return end
+	data:SetAsync(plr.UserId, {
+		["Clicks"] = clicks.Value;
+		["Rebirth"] = rebirths.Value;
+	})
+end)
+
+-- Gui --
+
+
+	
+local screen = Instance.new("ScreenGui")
+screen.Name = "Screen"
+screen.Parent = plr.PlayerGui
+screen.IgnoreGuiInset = true
+screen.ResetOnSpawn = false
+
+
+local clbtn = Instance.new("ImageButton")
+clbtn.Name = "Click"
+clbtn.BackgroundColor3 = Color3.fromRGB(0,0,0)
+clbtn.Position = UDim2.new(0.46, 0,0.8, 0)
+clbtn.Size = UDim2.new(0, 121,0, 131)
+clbtn.Parent = screen
+
+local Corner = Instance.new("UICorner")
+Corner.CornerRadius = UDim.new(0,12)
+Corner.Parent = clbtn
+
+local Scaler = Instance.new("UIScale")
+Scaler.Scale = 0.9
+Scaler.Parent = clbtn
+
+local kd = false
+
+clbtn.MouseButton1Click:Connect(function()
+	if kd == false then
+		kd = true
+		plr:WaitForChild("leaderstats"):WaitForChild("Clicks").Value += 1
+		wait(1.5)
+		kd = false
+		end
+end)
+
+local il = Instance.new("ImageLabel")
+il.BackgroundColor3 = Color3.fromRGB(0,133,200)
+il.Position = UDim2.new(0.064, 0,0.06, 0)
+il.Size = UDim2.new(0, 105,0, 114)
+il.Parent = clbtn
+
+local Corner1 = Instance.new("UICorner")
+Corner1.CornerRadius = UDim.new(0,12)
+Corner1.Parent = il
+
+local il1 = Instance.new("ImageLabel")
+il1.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+il1.Position = UDim2.new(0.023, 0,-0.006, 0)
+il1.Size = UDim2.new(0, 102,0, 100)
+il1.Image = "rbxassetid://5715427603"
+il1.Parent = il
+
+local Corner2 = Instance.new("UICorner")
+Corner2.CornerRadius = UDim.new(0,12)
+Corner2.Parent = il1
+
+
+plr.Character:WaitForChild("HumanoidRootPart").Position = CliTp.Position
